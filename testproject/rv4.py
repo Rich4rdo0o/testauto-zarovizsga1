@@ -14,6 +14,7 @@ missing_city = driver.find_element_by_id('missingCity')
 verify = driver.find_element_by_id('submit')
 cities1 = driver.find_element_by_id('cites')
 cities2 = driver.find_elements_by_xpath('//li')
+result = driver.find_element_by_id('result')
 
 # automatizálás elveit nézve rettenetes megoldás, de legalább megtalálja a várost
 # gondolom listába kellene tenni a városokat, manipulálni a listákat és összehasonlítani
@@ -125,5 +126,6 @@ assert (len(cheyenne)) == 3
 
 # missing_city.send_keys('')
 # verify.click()
+# assert result.text == 'Eltaláltad.'
 
 driver.close()
